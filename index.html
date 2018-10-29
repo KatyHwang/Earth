@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earth </title>
+    <style type="text/css">
+        /*星星閃撶動劃*/
+
+        @-webkit-keyframes starPulse {
+            from {
+                opacity: :1;
+            }
+            to {
+                opacity: :0.1;
+            }
+        }
+
+        @-moz-keyframes starPulse {
+            from {
+                opacity: :1;
+            }
+            to {
+                opacity: :0.1;
+            }
+        }
+
+
+        @-o-keyframes starPulse {
+            from {
+                opacity: :1;
+            }
+            to {
+                opacity: :0.1;
+            }
+        }
+
+
+        @keyframes starPulse {
+            from {
+                opacity: :1;
+            }
+            to {
+                opacity: :0.1;
+            }
+        }
+
+        /*太陽動劃*/
+
+        @keyframes sumFire {
+            from {
+                -webkit-box-shadow: 0 0 50px #f5c91a;
+                -moz-box-shadow: 0 0 50px #f5c91a;
+                -o-box-shadow: 0 0 50px #f5c91a;
+                box-shadow: 0 0 50px #f5c91a;
+
+            }
+            to {
+                -webkit-box-shadow: 0 0 300px #f5c91a;
+                -moz-box-shadow: 0 0 300px #f5c91a;
+                -o-box-shadow: 0 0 300px #f5c91a;
+                box-shadow: 0 0 300px #f5c91a;
+
+            }
+        }
+
+        @-webkit-keyframes sumFire {
+            from {
+                -webkit-box-shadow: 0 0 50px #f5c91a;
+                -moz-box-shadow: 0 0 50px #f5c91a;
+                -o-box-shadow: 0 0 50px #f5c91a;
+                box-shadow: 0 0 50px #f5c91a;
+
+            }
+            to {
+                -webkit-box-shadow: 0 0 300px #f5c91a;
+                -moz-box-shadow: 0 0 300px #f5c91a;
+                -o-box-shadow: 0 0 300px #f5c91a;
+                box-shadow: 0 0 300px #f5c91a;
+
+            }
+        }
+
+        @-moz-keyframes sumFire {
+            from {
+                -webkit-box-shadow: 0 0 50px #f5c91a;
+                -moz-box-shadow: 0 0 50px #f5c91a;
+                -o-box-shadow: 0 0 50px #f5c91a;
+                box-shadow: 0 0 50px #f5c91a;
+
+            }
+            to {
+                -webkit-box-shadow: 0 0 300px #f5c91a;
+                -moz-box-shadow: 0 0 300px #f5c91a;
+                -o-box-shadow: 0 0 300px #f5c91a;
+                box-shadow: 0 0 300px #f5c91a;
+
+            }
+        }
+
+        @-o-keyframes sumFire {
+            from {
+                -webkit-box-shadow: 0 0 50px #f5c91a;
+                -moz-box-shadow: 0 0 50px #f5c91a;
+                -o-box-shadow: 0 0 50px #f5c91a;
+                box-shadow: 0 0 50px #f5c91a;
+
+            }
+            to {
+                -webkit-box-shadow: 0 0 300px #f5c91a;
+                -moz-box-shadow: 0 0 300px #f5c91a;
+                -o-box-shadow: 0 0 300px #f5c91a;
+                box-shadow: 0 0 300px #f5c91a;
+
+            }
+        }
+
+        /*軌機*/
+
+        @keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-o-keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #universe {
+            background: black;
+
+            /*支持不同劉覽器*/
+            background: -webkit-radial-gradient(#555, #000);
+            background: -moz-radial-gradient(#555, #000);
+            background: -o-radial-gradient(#555, #000);
+            background: radial-gradient(#555, #000);
+        }
+
+        #starts {
+            position: relative;
+            /*圖層位置:數字愈小愈部*/
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: url(img/starts.png);
+            background-size: cover;
+            /*星星閃燁*/
+            -webkit-animation: starPulse 5s infinite alternate;
+            -moz-animation: starPulse 5s infinite alternate;
+            -o-animation: starPulse 5s infinite alternate;
+            animation: starPulse 5s infinite alternate;
+        }
+
+        #sun {
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            height: 200px;
+            width: 200px;
+            background: orange;
+            /*圓角*/
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -o-border-radius: 100px;
+            border-radius: 100px;
+
+            margin-top: -100px;
+            margin-left: -100px;
+            /*支持不同劉覽器*/
+            background: -webkit-radial-gradient(#f5c313, #ec7e08);
+            background: -moz-radial-gradient(#f5c313, #ec7e08);
+            background: -o-radial-gradient(#f5c313, #ec7e08);
+            background: radial-gradient(#f5c313, #ec7e08);
+
+            /*陰影*/
+            -webkit-box-shadow: 0 0 50px #f5c91a;
+            -moz-box-shadow: 0 0 50px #f5c91a;
+            -o-box-shadow: 0 0 50px #f5c91a;
+            box-shadow: 0 0 50px #f5c91a;
+
+            /*太陽閃燁*/
+            -webkit-animation: sumFire 3s infinite alternate;
+            -moz-animation: sumFire 3s infinite alternate;
+            -o-animation: sumFire 3s infinite alternate;
+            animation: sumFire 3s infinite alternate;
+        }
+
+
+        #earth0rbit {
+            /* border: solid 1px red;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -350px;
+            margin-left: -300px;
+            z-index: 4;
+            height: 800px;
+            width: 600px;
+
+            /*圓角*/
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -o-border-radius: 100%;
+            border-radius: 100%;
+
+            /*動畫*/
+            -webkit-animation: spin 15s infinite;
+            -moz-animation: spin 15s infinite;
+            -o-animation: spin 15s infinite;
+            animation: spin 15s infinite;
+        }
+
+        #earth {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -40px;
+        }
+
+        #moon0rbit {
+           /* border: solid 1px red;*/
+            height: 180px;
+            width: 180px;
+            position: absolute;
+            z-index: 4;
+            top: 50%;
+            left:  -45px;
+            margin-top: -80px;
+            /*圓角*/
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -o-border-radius: 100%;
+            border-radius: 100%;
+
+            /*動畫*/
+            -webkit-animation: spin 15s infinite;
+            -moz-animation: spin 15s infinite;
+            -o-animation: spin 15s infinite;
+            animation: spin 15s infinite;
+        }
+
+        
+
+    </style>
+</head>
+
+<body id="universe">
+
+
+    <div id="starts"></div>
+    <div id="sun"></div>
+    <div id="earth0rbit">
+        <img id="earth" src="img/a.png" width="90px" height="90px" />
+        <div id="moon0rbit">
+            <div id="moon">
+ <img id="earth" src="img/b.png" width="40px" height="35px" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
